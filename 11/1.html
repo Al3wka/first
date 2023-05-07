@@ -71,11 +71,12 @@
         b.push(a[a.length - i - 1]);
     }
 
+
     let needArray = [];
     let needArray1 = []
     powTwo.map((value) => {
         const positionValueInArrayPowTwo = powTwo.findIndex(item => item === value);
-        const array1 = powTwoRelation[positionValueInArrayPowTwo + 2];
+        const array1 = powTwoRelation[positionValueInArrayPowTwo + 5];
         const array2 = powTwoRelation[positionValueInArrayPowTwo + 1];
         for (let i = 0; i < r / 2; i = i + value) {
             for (let j = 0; j < powTwo.find(item => item === value); j++) {
