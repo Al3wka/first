@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .test {
+            display: flex;
+            flex-direction: column;
+            right: 100px;
+            width: 200px;
+            background: yellow;
+        }
+
+        .test .red {
+            background: red;
+        }
+
+        .test > .red:first-child {
+            background: black;
+        }
+
+        .test > .green:first-child {
+            background: green;
+        }
+
+        .test2 {
+            background: blue;
+            display: flex;
+            flex-direction: column;
+            right: 100px;
+            width: 200px;
+        }
+
+        .test2 .red {
+            background: red;
+        }
+
+        .test2 .test2 green {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<div class="test">
+    1
+    <div class="blue">
+        11
+        <div class="red">111</div>
+    </div>
+    <div class="red">
+        12
+        <div class="red">121</div>
+    </div>
+</div>
+
+<div class="test2">
+    2
+    <div class="red">21
+        <div>211
+            <div class="test2 green">222</div>
+        </div>
+        <div>212</div>
+    </div>
+</div>
+<div class="button">
+    <button id="button">
+        click me
+        </button>
+</div>
+
+</body>
+<script>
+    // const a = "team1"
+    // const b = "team2 - w"
+    // const c = "team3"
+    // const d = "team4 - w"
+    // const e = "team5 - w"
+    // const f = "team6"
+    // const g = "team7 - w"
+    // const h = "team8"
+    // const Teams = [a, b, c, d, e, f, g, h]
+    const a = [12, "team1"]
+    const b = [1, "team12"]
+    const c = [1234, "team13"]
+    const d = [1, "team14"]
+    const e = [1, "team15"]
+    const f = [123, "team16"]
+    const g = [12, "team17"]
+    const h = [1, "team18"]
+    const Teams = [a, b, c, d, e, f, g, h]
+    const TeamsNew = []
+    const TeamsNew1 = []
+    const TeamsNew2 = []
+
+    for (let i = 0; i < Teams.length; i++){
+        let ab = Teams[i];
+        if (ab[0] > 1) {
+            let j = Math.floor(i / 2);
+            TeamsNew[j] = Teams[i];
+        }
+    }
+
+    for (let i = 0; i < TeamsNew.length; i++){
+        let ab = TeamsNew[i];
+        if (ab[0] > 12) {
+            let j = Math.floor(i / 2);
+            TeamsNew1[j] = TeamsNew[i];
+        }
+    }
+
+
+    for (let i = 0; i < TeamsNew1.length; i++){
+        let ab = TeamsNew1[i];
+        if (ab[0] > 123) {
+            let j = Math.floor(i / 2);
+            TeamsNew2[j] = TeamsNew1[i];
+        }
+    }
+
+    console.log(Teams)
+    console.log(TeamsNew)
+    console.log(TeamsNew1)
+    console.log(TeamsNew2)
+</script>
+</html>

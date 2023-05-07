@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    const a = []
+    const b = [] //4
+    const c = [] //8
+    const d = [] //16
+    const e = [] //32
+    const f = [] //64
+    const g = [] //128
+    const h = [] //256
+    const h1 = [] //256
+    const h2 = [] //256
+    const h3 = [] //256
+    const h4 = [] //256
+    const h5 = [] //256
+
+   const r = 256;
+    for (let i = 0; i < r; i++) {
+        a[i] = i + 1;
+    }
+    // for(let i = 0; i < (a.length/2); i++){
+    //     c.push(a[i]);
+    //     c.push(a[a.length-i-1]);
+    //
+    // }
+    // for(let i = 0; i < (c.length/2); i=i+2){
+    //     d.push(c[i]);
+    //     d.push(c[i+1]);
+    //     d.push(c[c.length-i-1]);
+    //     d.push(c[c.length-i-2]);
+    // }
+    // // for(let i = 0; i < a.length/2;i=i+4){
+    // //   b[i]=i+1;
+    // //   b[i+Math.pow(2,i)]=(4*Math.pow(2,(a.length/16))-i);
+    // //   b[i+2]=(3*Math.pow(2,(a.length/16))-i-4);
+    // //   b[i+3]=(2*Math.pow(2,(a.length/16))-i+1);
+    // //
+    // // }
+
+    // for (let i=0; i<16;i++){
+    //     if((i % 2 == 0) !== false){
+    //         b.push(a[i]);
+    //     } else {c.push(a[i]);}
+    // }
+    // for (let i=0; i<8;i++){
+    //     d.push(b[i]);
+    //     delete b[i];
+    //     d.push(c[c.length-i-1]);
+    //     delete c[c.length-i-1];
+    // }
+    // for(let i = 0; i < (d.length/2); i=i+2){
+    //     e.push(d[i]);
+    //     e.push(d[i+1]);
+    //     e.push(d[d.length/2+i+1]);
+    //     e.push(d[d.length/2+i]);
+    // }
+
+    const powTwo = [2, 4, 8, 16, 32, 64,128,256,512,1024]
+    const powTwoRelation = [a, b, c, d, e, f, g, h,h1,h2,h3,h4,h5]
+    for (let i = 0; i < r / 2; i = i + 1) {
+        b.push(a[i]);
+        b.push(a[a.length - i - 1]);
+    }
+
+    let needArray = [];
+    let needArray1 = []
+    powTwo.map((value) => {
+        const positionValueInArrayPowTwo = powTwo.findIndex(item => item === value);
+        const array1 = powTwoRelation[positionValueInArrayPowTwo + 2];
+        const array2 = powTwoRelation[positionValueInArrayPowTwo + 1];
+        for (let i = 0; i < r / 2; i = i + value) {
+            for (let j = 0; j < powTwo.find(item => item === value); j++) {
+                array1.push(array2[i + j]);
+            }
+            for (let j = powTwo.find(item => item === value); j > 0; j--) {
+                array1.push(array2[array2.length - i - j]);
+            }
+        }
+        powTwoRelation[positionValueInArrayPowTwo + 2] = array1;
+        powTwoRelation[positionValueInArrayPowTwo + 1] = array2;
+
+        if (value === r){
+            needArray = powTwoRelation[powTwo.findIndex(item => item === value) + 2];
+            needArray1 = powTwoRelation[powTwo.findIndex(item => item === value) + 1];
+        }
+
+    })
+    console.log('array2', needArray1);
+
+
+</script>
+</html>

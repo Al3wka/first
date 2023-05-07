@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .layout {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        text-align: -webkit-center;
+    }
+
+    .round1 {
+        display: flex;
+        flex-direction: column;
+        background: yellow;
+        width: 200px;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .round2 {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        background: blue;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .round3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        background: brown;
+        border: 1px solid black;
+        justify-content: center;
+    }
+
+    .round4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        width: 200px;
+        border: 1px solid black;
+        justify-content: center;
+    }
+
+    .round5 {
+        display: flex;
+        flex-direction: column;
+        background: yellow;
+        width: 200px;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .round6 {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        background: blue;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .round7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        background: brown;
+        border: 1px solid black;
+        justify-content: center;
+    }
+
+    .round8 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        width: 200px;
+        border: 1px solid black;
+        justify-content: center;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        width: 200px;
+        border: 1px solid black;
+        justify-content: center;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        width: 50px;
+        border: 4px solid black;
+        justify-content: center;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 20px;
+        background: red;
+        margin: 2px;
+    }
+
+    .team2 {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 40px;
+        background: red;
+        margin: 2px;
+    }
+</style>
+<body>
+<div class="layout">
+    <div class="round1"></div>
+    <div class="round2"></div>
+    <div class="round3"></div>
+    <div class="round4"></div>
+    <div class="round5"></div>
+    <div class="round6"></div>
+    <div class="round7"></div>
+    <div class="round8"></div>
+    <div class="button">
+        <button id="button">
+            click me
+        </button>
+    </div>
+</div>
+</body>
+<script>let div
+
+
+// массив с атрибутами
+// const a = "team1"
+// const b = "team2 - w"
+// const c = "team3"
+// const d = "team4 - w"
+// const e = "team5 - w"
+// const f = "team6"
+// const g = "team7 - w"
+// const h = "team8"
+// const Teams = [a, b, c, d, e, f, g, h]
+// const TeamsNew = []
+// const TeamsNew1 = []
+// const TeamsNew2 = [],
+round1 = document.querySelector(".round1");
+round2 = document.querySelector(".round2");
+round3 = document.querySelector(".round3");
+round4 = document.querySelector(".round4");
+round5 = document.querySelector(".round5");
+round6 = document.querySelector(".round6");
+round7 = document.querySelector(".round7");
+round8 = document.querySelector(".round8");
+ttext = document.querySelector(".text");
+button = document.querySelector('#button');
+
+
+//
+// for (let i = 0; i < Teams.length; i++) {
+//     if (Teams[i].includes(" - w") !== false) {
+//         let j = Math.floor(i / 2);
+//         TeamsNew[j] = Teams[i];
+//
+//     }
+// }
+// for (let i = 0; i < TeamsNew.length; i++) {
+//     if (TeamsNew[i].includes(" - w") !== false) {
+//         let j = Math.floor(i / 2);
+//         TeamsNew1[j] = TeamsNew[i];
+//
+//     }
+// }
+// for (let i = 0; i < TeamsNew1.length; i++) {
+//     if (TeamsNew1[i].includes(" - w") !== false) {
+//         let j = Math.floor(i / 2);
+//         TeamsNew2[j] = TeamsNew1[i];
+//
+//     }
+// }
+const teams = []
+for (let i= 0; i < 16; i++){
+    teams.push("team"+(i+1))
+    }
+console.log(teams);
+
+const teamPosition = []
+for (let i = 0; i<(teams.length/2);i++){
+    teamPosition.push(teams[i])
+    teamPosition.push(teams[(teams.length)-i-1])
+}
+console.log(teamPosition);
+const a = [, "team1"]
+const b = [, "team2"]
+const c = [, "team3"]
+const d = [, "team4"]
+const e = [, "team5"]
+const f = [, "team6"]
+const g = [, "team7"]
+const h = [, "team8"]
+const a1 = [, "team9"]
+const b1 = [, "team10"]
+const c1 = [, "team11"]
+const d1 = [, "team12"]
+const e1 = [, "team13"]
+const f1 = [, "team14"]
+const g1 = [, "team15"]
+const h1 = [, "team16"]
+const h2 = [, "team17"]
+const h3 = [, "team18"]
+const h4 = [, "team19"]
+const h5 = [, "team20"]
+const h6 = [, "team21"]
+const h7 = [, "team22"]
+const h8 = [, "team23"]
+const h9 = [, "team24"]
+const h10 = [, "team25"]
+const h11 = [, "team26"]
+const h12 = [, "team27"]
+const h13 = [, "team28"]
+const h14 = [, "team29"]
+const h15 = [, "team30"]
+const h16 = [, "team31"]
+const h17 = [, "team32"]
+const h18 = [, "team33"]
+const h19 = [, "team34"]
+const h20 = [, "team35"]
+const h21 = [, "team36"]
+const h22 = [, "team37"]
+const h23 = [, "team38"]
+const h24 = [, "team39"]
+const h25 = [, "team40"]
+const h26 = [, "team41"]
+const h27 = [, "team42"]
+const h28 = [, "team43"]
+const h29 = [, "team44"]
+const h30 = [, "team45"]
+const h31 = [, "team46"]
+const h32 = [, "team47"]
+const h33 = [, "team48"]
+const h34 = [, "team49"]
+const h35 = [, "team50"]
+const h36 = [, "team51"]
+const h37 = [, "team52"]
+const h38 = [, "team53"]
+const h39 = [, "team54"]
+const h40 = [, "team55"]
+const h41 = [, "team56"]
+const h42 = [, "team57"]
+const h43 = [, "team58"]
+const h44 = [, "team59"]
+const h45 = [, "team60"]
+const h46 = [, "team61"]
+const h47 = [, "team62"]
+const h48 = [, "team63"]
+const h49 = [, "team64"]
+
+
+const Teams = [a, b, c, d, e, f, g, h, a1, b1, c1, d1, e1, f1, g1, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h23, h24, h25, h26, h27, h28, h29, h30, h31, h32, h33, h34, h35, h36, h37, h38, h39, h40, h41, h42, h43, h44, h45, h46, h47, h48, h49]
+const TeamsNew = []
+const TeamsNew1 = []
+const TeamsNew2 = []
+const TeamsNew3 = []
+const TeamsNew4 = []
+const TeamsNew5 = []
+const TeamsResult = []
+
+for (let i = 0; i < Teams.length; i++) {
+    let ab = Teams[i];
+    if (ab[0] > 1) {
+        let j = Math.floor(i / 2);
+        TeamsNew[j] = Teams[i];
+    }
+}
+
+for (let i = 0; i < TeamsNew.length; i++) {
+    let ab = TeamsNew[i];
+    if (ab[0] > 12) {
+        let j = Math.floor(i / 2);
+        TeamsNew1[j] = TeamsNew[i];
+    }
+}
+
+
+for (let i = 0; i < TeamsNew1.length; i++) {
+    let ab = TeamsNew1[i];
+    if (ab[0] > 123) {
+        let j = Math.floor(i / 2);
+        TeamsNew2[j] = TeamsNew1[i];
+    }
+}
+for (let i = 0; i < TeamsNew2.length; i++) {
+    let ab = TeamsNew2[i];
+    if (ab[0] > 1234) {
+        let j = Math.floor(i / 2);
+        TeamsNew3[j] = TeamsNew2[i];
+    }
+}
+button.addEventListener('click', function (event) {
+    let abc = promt("Счет?", '');
+    TeamsResult[i] = abc;
+});
+
+
+// for (let i = 0; i < TeamsNew2.length; i++) {
+//     let ab = TeamsNew2[i];
+//     if (ab[0] > 1234) {
+//         let j = Math.floor(i / 2);
+//         TeamsNew3[j] = TeamsNew2[i];
+//     }
+
+Teams.forEach(element => {
+    div = document.createElement("div");
+    div.classList.add("team");
+    div.innerText = element[1];
+    round1.appendChild(div);
+})
+
+TeamsNew.forEach(element => {
+    div = document.createElement("div");
+    div.classList.add("team2");
+    div.innerText = element[1];
+    round2.appendChild(div);
+});
+
+
+TeamsNew1.forEach(element => {
+    div = document.createElement("div");
+    div.classList.add("team2");
+    div.innerText = element[1];
+    round3.appendChild(div);
+});
+
+// TeamsNew1.forEach(element => {
+//     div = document.createElement("div");
+//     div.classList.add("ttext");
+//     div.innerText = element;
+//     team2.appendChild(div);
+//
+// });
+
+TeamsNew2.forEach(element => {
+    div = document.createElement("div");
+    div.classList.add("team2");
+    div.innerText = element[1];
+    round4.appendChild(div);
+});
+TeamsNew3.forEach(element => {
+    div = document.createElement("div");
+    div.classList.add("team2");
+    div.innerText = element[1];
+    round5.appendChild(div);
+});
+console.log(Teams);
+console.log('TeamsNew',TeamsNew);
+console.log('TeamsNew1',TeamsNew1);
+console.log('TeamsNew2',TeamsNew2);
+console.log('TeamsNew3',TeamsNew3);
+console.log('TeamsNew4',TeamsNew4);
+
+
+</script>
+</html>
